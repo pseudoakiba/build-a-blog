@@ -1,0 +1,12 @@
+<ul>
+    {% for blogpost in completed_blogposts %}
+    <span><li>{{blogpost.name}}</li><a href="/blogpost?id={{blogpost.id}}">read post</a></span>
+    {% endfor %}
+</ul>
+
+
+
+<form method="GET" action="/blogpost" style="display:inline-block;">
+    <input type="hidden" name="blogpost-id" value="{{blogpost.id}}" />
+    <input type="submit" value="{{blogpost.name}}" />
+</form>
